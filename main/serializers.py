@@ -14,3 +14,7 @@ class ProductSerializer(ModelSerializer):
         fields = '__all__'
 
 
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        rep['category']= CategorySerializer(instance.category).data
+        return rep
