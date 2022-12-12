@@ -15,8 +15,9 @@ class ProductSerializer(ModelSerializer):
         fields = '__all__'
 
 
-    def to_representation(self, instance):
+    def to_representation(self, instance : Product):
         rep = super().to_representation(instance)
         rep['category']= CategorySerializer(instance.category).data
         rep['comments']= CommentSerializer(instance.comments.all(), many=True).data
+        rep['rating'] = instance.average_rating
         return rep
