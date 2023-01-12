@@ -18,6 +18,8 @@ ENV DB_PASSWORD=2kwPoq5OZxOPgVr24xDE
 ENV DB_HOST=containers-us-west-102.railway.app
 ENV DB_PORT=7496
 ENV DEBUG=1
+ENV SMTP_EMAIL = baraev1993@gmail.com
+ENV SMTP_PASSWORD = nhbqkroqxkaycdfv
 ENV ALLOWED_HOSTS=127.0.0.1,
 ENV PORT=8000
 
