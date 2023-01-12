@@ -23,7 +23,6 @@ ENV SMTP_PASSWORD = nhbqkroqxkaycdfv
 ENV ALLOWED_HOSTS=127.0.0.1,
 ENV PORT=8000
 
-RUN python3 manage.py migrate
 RUN python3 manage.py collectstatic
 
 CMD gunicorn --bind 0.0.0.0:$PORT config.wsgi:application
