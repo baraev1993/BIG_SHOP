@@ -18,8 +18,6 @@ class Product(models.Model):
     status = models.CharField(max_length=15,choices=[('есть в наличии', 'in stock'),('нет в наличии','out of stock'),('ожидается','pending')])
     image = models.ImageField(upload_to='products', null= True)
 
-    def __str__(self):
-        return f'[{self.category}] -> {self.title}'
 
     
     @property
